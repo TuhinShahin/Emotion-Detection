@@ -1,6 +1,3 @@
-Great job on achieving over 83% accuracy on your real-time emotion detection model! Below is an updated README file reflecting the additional information you provided:
-
----
 
 # Real-Time Emotion Detection using Convolutional Neural Networks
 
