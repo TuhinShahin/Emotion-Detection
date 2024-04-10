@@ -14,7 +14,7 @@ emotion_model = model_from_json(loaded_model_json)
 
 # Load weights into new model
 emotion_model.load_weights("realtime7_emotion_detection.h5")
-print("Loaded model from disk")
+# print("Loaded model from disk")
 
 # Start the webcam feed
 cap = cv2.VideoCapture(0)
