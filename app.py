@@ -21,7 +21,7 @@ desired_width = 840
 desired_height = 680
 
 # Streamlit app layout
-st.title('Emotion Detection with Streamlit')
+st.title('Realtime Emotion Detection')
 
 # Function to process and display the video feed
 def display_video():
