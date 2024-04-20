@@ -1,7 +1,7 @@
-keras~=2.4.3
+keras
 tensorflow-cpu
 tensorflow
 streamlit_webrtc
-numpy==1.21.6
+numpy
 streamlit
 opencv-python
