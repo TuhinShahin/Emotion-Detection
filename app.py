@@ -14,7 +14,7 @@ json_file.close()
 emotion_model = model_from_json(loaded_model_json)
 
 # Load weights into new model
-emotion_model.load_weights("realtime8_emotion_detection.h5")
+emotion_model.load_weights("realtime8_emotion_detection.weights.h5")
 st.write("Loaded model from disk")
 
 # Load the face cascade classifier
