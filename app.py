@@ -61,6 +61,7 @@ option = st.sidebar.selectbox(
 )
 
 # Function to process and display the video feed
+# Function to process and display the video feed
 def display_video():
     # Start the webcam feed
     cap = cv2.VideoCapture(0)
@@ -108,6 +109,7 @@ if option == 'Real-time Detection':
             # Start a new thread to run the webcam feed
             webcam_thread = threading.Thread(target=display_video)
             webcam_thread.start()
+
 
 # Upload file for image/video detection
 elif option == 'Detect from Image/Video':
