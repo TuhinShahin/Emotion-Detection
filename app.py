@@ -61,7 +61,6 @@ option = st.sidebar.selectbox(
 )
 
 # Function to process and display the video feed
-# Function to process and display the video feed
 def display_video():
     # Start the webcam feed
     cap = cv2.VideoCapture(0)
@@ -72,34 +71,6 @@ def display_video():
         ret, frame = cap.read()
         if not ret:
             break
-
-        # Convert frame to grayscale
-        gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-        # Detect faces in the grayscale frame
-        faces = face_cascade.detectMultiScale(gray_frame, scaleFactor=1.3, minNeighbors=5)
-
-        # Process each detected face
-        for (x, y, w, h) in faces:
-            # Extract the region of interest (ROI) containing the face
-            roi_gray = gray_frame[y:y+h, x:x+w]
-            roi_color = frame[y:y+h, x:x+w]
-
-            # Preprocess the ROI for emotion prediction
-            roi_color_resized = cv2.resize(roi_color, (48, 48))
-            roi_color_resized = cv2.cvtColor(roi_color_resized, cv2.COLOR_BGR2RGB)
-            roi_color_resized = np.expand_dims(roi_color_resized, axis=0)
-
-            # Predict the emotion
-            emotion_prediction = emotion_model.predict(roi_color_resized)
-            maxindex = int(np.argmax(emotion_prediction))
-
-            # Display the predicted emotion text above the bounding box
-            cv2.putText(frame, emotion_dict[maxindex], (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 2)
-
-        # Display the frame in the Streamlit app
-        st.image(frame, channels='BGR', use_column_width=True)
-
 
         # Convert frame to grayscale
         gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
