@@ -118,6 +118,7 @@ def display_video():
 
 # Start button
 if option == 'Real-time Detection':
+    st.write('The Realtime Feedback is under development, Stay tuned')
     run_webcam = False
     if st.button('Start'):
         if not run_webcam:
@@ -125,7 +126,6 @@ if option == 'Real-time Detection':
             # Start a new thread to run the webcam feed
             webcam_thread = threading.Thread(target=display_video)
             webcam_thread.start()
-            st.title('The Realtime feed is under development')
 
 
 # Upload file for image/video detection
