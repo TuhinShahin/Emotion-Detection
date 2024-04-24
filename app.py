@@ -125,6 +125,7 @@ if option == 'Real-time Detection':
             # Start a new thread to run the webcam feed
             webcam_thread = threading.Thread(target=display_video)
             webcam_thread.start()
+            st.title('The Realtime feed is under development')
 
 
 # Upload file for image/video detection
