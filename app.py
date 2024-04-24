@@ -51,6 +51,22 @@ def detect_emotion_from_image(image):
 
     return image
 
+
+def display_webcam():
+    cap = cv2.VideoCapture(0)
+    cv2.namedWindow('Webcam Feed', cv2.WINDOW_NORMAL)
+    cv2.resizeWindow('Webcam Feed', 840, 600)
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            break
+        frame = detect_emotion_from_image(frame)
+        cv2.imshow('Webcam Feed', frame)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+    cap.release()
+    cv2.destroyAllWindows()
+
 # Streamlit app layout
 st.title('Emotion Detection with Streamlit')
 
