@@ -1,10 +1,6 @@
-keras
-tensorflow-cpu
-tensorflow
-streamlit_webrtc
 numpy
 streamlit
-opencv-python
-os
-threading
-tempfile
+keras
+opencv-python-headless
+tensorflow-cpu
+streamlit_webrtc
