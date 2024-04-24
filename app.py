@@ -117,7 +117,6 @@ def display_video():
         st.image(frame, channels='BGR', use_column_width=True)
 
 # Start button
-st.title('The Realtime feed is under development')
 if option == 'Real-time Detection':
     run_webcam = False
     if st.button('Start'):
